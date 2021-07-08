@@ -1,147 +1,243 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html>
+    <!-- Head section holds info for the browser. -->
     <head>
+        <!-- Our page's title and custom styling file. -->
+		<title>Bone Monitoring Clinic AB</title>
+        <link rel="stylesheet" href="index.css" type="text/css">
         
+        <!-- Info for the browser to decode our HTML code. -->
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>BMC</title>
-        
-        <style>
-
-    html body {
-        font-family: 'Raleway', sans-serif;
-        background-color: white;
-    }
-
-    :root {
-        --accent: blue;
-        --border-width:  5px ;
-    }
-
-</style>
-
-
-<link rel="stylesheet" href="http://example.com/css/main.css">
-
-
-
-
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-
-
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> 
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous">
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
- 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/haskell.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scala.min.js"></script>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/swift.min.js"></script>
-    
-    <script>hljs.initHighlightingOnLoad();</script>
-
-
-
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
-<script>$(document).on('click', function() { $('.collapse').collapse('hide'); })</script>
- <meta name="generator" content="Hugo 0.80.0" />
-        
-            <link href="/index.xml" rel="alternate" type="application/rss&#43;xml" title="BMC" />
-            <link href="/index.xml" rel="feed" type="application/rss&#43;xml" title="BMC" />
-        
-
-        
-
-        
-            <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        
-
-        
-
+		<!-- Bootstrap files -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </head>
-
+    <!-- Body holds the content of the page. -->
     <body>
-        
 
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand visible-xs" href="#">BMC</a>
-                    <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+        <div class="sticky-top">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-md navbar-light bg-light justify-content-center">
+                <a class="navbar-brand d-flex w-50 mr-auto" href="#home"><span style="color:aquamarine">B</span> <span style="color:red">M</span><span style="color:sandybrown">C</span></a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse" id="nav">
+                    <ul class="nav navbar-nav mr-auto justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">Om benskörhet</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#dxa">Vad är DXA?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#om_oss">Hur går en DXA mätning till?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#partners">Forskning</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Kontakta oss</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="collapse navbar-collapse">
-                    
-                        <ul class="nav navbar-nav">
+            </nav>
+        </div>
+
+        <!-- Page container -->
+        <div class="container-fluid">
+            
+            <!-- Main column where content goes -->
+            <div class="col main">
+
+                <!-- Header section -->
+                <!-- <div class="row firstsection" id="home">
+                    <div class="bigtext">
+                        <h1>Bone medical center AB</h1>
+                        <h4>I kamp mot benskörhet</h4>
+                    </div>
+                </div> -->
+
+                <div class="row section" id="home">
+
+  
+
+                    <div class="col">
+                        <div class="bigtext">
+                            <h1>Bone Monitoring Clinic AB</h1>
+                            <h4>I kamp mot benskörhet</h4>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <!-- About section -->
+                <div class="row section" id="about">
+
+                    <div class="col">
+                        <img src="img/Kotfraktur.jpg" class="img-fluid rounded float-left">
+                    </div>
+
+                    <div class="col">
+                        <h2>Om benskörhet</h2>
+
+                        <span class="align-middle">
+                            <p>
+                                Osteoporos, eller benskörhet som det heter på svenska, är ett tillstånd där skelettet blir skörare. Det
+beror på att nedbrytningen och uppbyggnaden av kroppens skelett inte fungerar som det ska. Benet
+bryts ner snabbare än det byggs upp, vilket innebär att skelettet blir svagare. Det gör att du lättare kan få
+en benskörhetsfraktur vid en olycka eller fall där andra, med ett normalstarkt skelett, kanske bara skulle
+få ett blåmärke eller en lätt stukning.
+</p>
+<p>
+Vid benskörhet är det vanligast att få ett benbrott i handled, överarm, höft, ryggkotor eller bäcken.
+Faktorer som kan påverka bentätheten är ålder, kön, ärftlighet, rökning, motionsvanor, vissa sjukdomar
+och vissa läkemedel, till exempel kortison eller aromatashämmare vid bröstcancer. Risken för
+benskörhet minskar om du är fysiskt aktiv.
+Vid tillräckligt hög ålder blir nästan alla bensköra. Hos kvinnor minskar benmassan något snabbare efter
+klimakteriet då mängden av kvinnligt könshormon, östrogen, minskar vilket gör att kvinnor löper en större
+risk att bli bensköra i tidigare ålder än män.        </p>
+<p>
+
+    Bentätheten mäts med hjälp av lågdosröntgen, DXA, för att se hur tätt skelettet är.
+    Du kan behöva gå igenom en bentäthetsmätning om du har fått ett benbrott efter en lättare
+    olyckshändelse. Det är ovanligt att små skador leder till benbrott om din bentäthet är som den ska vara.
+    Du kan också behöva göra en bentäthetsmätning vid vissa sjukdomar eller behandlingar
+    
+</p>
+<a href="https://www.sheffield.ac.uk/FRAX/tool.aspx?country=5" >FRAX</a>, Fracture Risk Assessment Tool, är ett verktyg som tagits fram för att beräkna frakturrisken under
+en 10-årsperiod. För att göra testet kan du gå in på
+                                
+                            </p>
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="row section" id="dxa">
+
+                    <div class="col">
+    
+                        <h2>Vad är DXA?</h2>
+    
+                        <p>
+                            DXA är en förkortning av Dual-energy X-ray Absorptiometry. Andra namn för samma mätning är DEXA,
+                            Benmineralmätning, Bentäthetsmätning och Bendensiometri.
+                            DXA är en speciell röntgenutrustning som endast används för mätning av bentäthet och
+                            kroppssammansättning. Till dessa mätningar används en mycket låg stråldos jämfört med andra
+                            röntgenundersökningar.
+                         </p>
+                         <p>
+
+                             Exempel på stråldoser vid olika röntgenundersökningar är:                        </p>
+                         </p>
+                         <p><b>Datortomografi</b> (skiktröntgen) av ländryggen på en vuxen person ger en effektiv dos på 8.4 mSv (1)</p>
+                         <p>
+
+                             <b>Slätröntgen</b> av ländryggen på en vuxen person ger en effektiv dos på 1.1 mSv (1)
+                            </p>
+                            <p>
+
+                                <b>DXA</b> av ländryggen på en vuxen person ger en effektiv dos på < 0,02 mSv (2)
+                            </p>
+                            <p class="tab">                                1) Leitz, Almén, Patientdoser från röntgenundersökningar i Sverige- utveckling från 2005–2008, SMM 2010:14 ISSN:2000–0456</p>
+                            <p class="tab">(2) G.M. Blake et al., Bone 38 (2006) 935–942</p>
+                            <p>För att förstå hur låg stråldosen är kan detta jämföras med ca 2 dagars strålning som vi får från den
+                                naturliga bakgrundsstrålningen (rymden, vår egen kropp och marken (radon undantaget)) vilket under ett
+                                år ger en stråldos på 1-2 mSv</p>
+                    </div>
+                    <div class="col">
+                        <img src="img/Fuji DXA.jpg" class="img-fluid">
+                    </div>
+    
+                </div>
+                <div class="row section" id="om_oss">
+
+                    <!-- <div class="col">
+                        <img src="img/Sven-Nyren.jpg" class="img-fluid">
+                    </div> -->
+
+                    <div class="col">
+                        <h2>Hur går en DXA mätning till?</h2>
+
+                        <span class="align-middle">
+                            <p>
+                                Vid en DXA-mätning ligger man på en brits där den svaga röntgenstrålen skickas genom det ben som
+ska undersökas. Stråldosen är betydligt lägre än vid en vanlig röntgenundersökning (se ovan, effektiv
+dos).  
+                            </p>
+                            <p>
+                                De vanligaste mätpunkterna är ländryggen och höfterna, som är ”golden standard” över hela världen,
+                                men beroende på frågeställning behöver man ibland även mäta en handled eller ryggkotorna från sidan.
+                                Mätresultatet är bara en av flera faktorer som bedöms av läkaren för att avgöra om du har en benskörhet
+                                som behöver behandlas.
+                            </p>
+                            <p>
+
+                                För att få ett så korrekt resultat som möjligt är det mycket viktigt att utförande klinik har rätt kompetens
+för utförande och tolkande av dessa mätningar. På BMC har vi Röntgensjuksköterskor som även är
+certifierade DXA-sköterskor. Vi har mångårig erfarenhet av bentäthetsmätningar vilket gör att vi kan hålla
+en mycket hög kvalitet på våra mätningar.
+                            </p>
                             
-                                <li><a href="/">BMC</a></li>
-                            
-                                <li><a href="/benskorhet/">Om benskörhet</a></li>
-                            
-                                <li><a href="/dxa/">Vad är DXA?</a></li>
-                            
-                                <li><a href="/matning/">Så går mätningen till</a></li>
-                            
-                                <li><a href="/forskning/">Forskning</a></li>
-                            
-                                <li><a href="/contact/">Kontakt</a></li>
-                            
-                        </ul>
-                    
-                    
-                        <ul class="nav navbar-nav navbar-right">
-                            
-                                <li class="navbar-icon"><a href="info@bmc-ab.se"><i class="fas fa-envelope"></i></a></li>
-                            
-                        </ul>
+                        </span>
+                    </div>
+
+                </div>
+
+                <div class="row section" id="partners">
+
+                    <div class="col">
+                        <h2>Forskning</h2>
+
+                        <span class="align-middle">
+                            <p>
+                                All personal på BMC har gått utbildning i Good Clinical Practice / God klinisk sed (GCP) och även
+Dataskyddsförordningen (DSF)/ General Data Protection Regulation (GDPR) som är en europeisk
+förordning som reglerar behandlingen av personuppgifter och det fria flödet av sådana uppgifter inom
+Europeiska unionen.
+                            </p>
+                            <p>
+                                Detta innebär att vi vet hur kliniska studier ska genomföras på rätt sätt och att vi kan säkerställa att all
+data är korrekt samt att studiedeltagarnas rättigheter och integritet skyddas.
+                            </p>
+                            <p>
+                                Vi har också mångårig erfarenhet av kliniska studier även internationellt
+                            </p>
+                            <p>Förutom bentäthet kan vi även utföra mätning för kroppssammansättning, ben- muskler- och fettvävnad.</p>
+                        </span>
+                    </div>
                     
                 </div>
+
+                
+
+                <!-- Contact section -->
+                <div class="row section" id="contact">
+                    <div class="footer">
+                        <h1 class="text-center">Kontakta oss</h1>
+                        <p>
+                            Lokal bentäthetsmätning (DXA): Dalvägen 22, Solna <br>
+                            Mailaddress: <a href="#">info@bonemedicalcenterab.com</a> <br>
+                            Telefonnummer (för bokning och frågor): 070-XX-YY-YYY
+                        </p>
+                        <br>
+                    </div>
+                </div>
+    
             </div>
-        </nav>
+        </div>
 
-
-<main>
-    <div class="intro">
-        
-        <h1>BMC</h1>
-        <h2>I kampen mot benskörhet</h2>
-        
-    </div>
-</main>
-
-        <footer>
-            <p class="copyright text-muted">© Bone Monitoring Clinic AB</p>
-        </footer>
-
-        
-
-        
     </body>
-
 </html>
-
